@@ -3,7 +3,7 @@ import moment from 'moment-timezone';
 import { obtenerTiempoRestante } from "../Logica/contador";
 import "../styles/ComingSoon.css";
 import fondo1 from "../Recursos/img/image1.png";
-import overlayImg from "../Recursos/img/XIII3Osi.png";
+import overlayImg from "../Recursos/img/XIII30Si.png";
 import overlayImgAlt from "../Recursos/img/XIII.png";
 import logo from "../Recursos/img/logo.png";
 import fb from "../Recursos/img/iconos/fb.png";
