@@ -3,13 +3,13 @@ version: '3'
 services:
   congreso-frontend:
     build:
-      context: ./Proyecto_Congreso_2025-main
+      context: ./congresoumg2025
       dockerfile: Dockerfile
     restart: always
     environment:
       - VIRTUAL_HOST=sistemasumgcoban.com.gt
       - LETSENCRYPT_HOST=sistemasumgcoban.com.gt
-      - LETSENCRYPT_EMAIL=tu@correo.com
+      - LETSENCRYPT_EMAIL=caal97@gmail.com
     networks:
       - web
     expose:
