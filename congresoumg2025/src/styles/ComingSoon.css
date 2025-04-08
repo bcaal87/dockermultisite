@@ -1,0 +1,515 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Pavanam&family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet');
+
+/* Reset completo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+:root {
+  --primary-bg: #0B0E17;
+  --secondary-bg: #171E30;
+  --accent-color: #FFFFFF;
+  --text-light: #FFFFFF;
+  --text-dark: #333333;
+  --font-main: 'Pavanam', sans-serif;
+  --font-heading: 'Paytone One', sans-serif;
+  --font-serif: 'Radley', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-main);
+  color: var(--text-light);
+  background-color: var(--primary-bg);
+  line-height: 1.6;
+}
+
+.coming-soon-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 1200px;
+  min-height: 600px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 80%;
+  z-index: 1;
+  object-fit: contain;
+}
+
+/* Navigation */
+.main-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background-color: rgba(11, 14, 23, 0);
+  margin: 0;
+}
+
+.nav-logo {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  background: transparent;
+  color: var(--text-light);
+  border: none;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 0;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Countdown Section */
+.countdown-section {
+  width: 100%;
+  min-height: 50vh;
+  padding: 9rem 5%;
+  background-color: var(--secondary-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  
+}
+
+.section-title {
+  font-family: var(--font-main);
+  font-size: 8.2em;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.countdown-timer {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: paytone-one;
+}
+
+.countdown-timer span {
+  font-family: var(--font-heading);
+  font-size: 6em;
+  font-weight: bold;
+  color: var(--accent-color);
+  min-width: auto;
+  
+}
+
+.time-title{
+  font-family: var(--font-main);
+  font-size: 1.2em;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+
+/* Footer */ 
+.main-footer {
+  width: 100%;
+  background-color: var(--primary-bg);
+  color: white;
+  padding: 0;
+}
+
+.footer-social {
+  width: 100%;
+  background-color: #0B0E17;
+  padding: 2rem 0 0; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; 
+  min-height: 80px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px; 
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.social-icon img {
+    width: 55px;
+    height: 55px;
+    filter: brightness(1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: -20px; 
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+.footer-content {
+  width: 100%;
+  max-width: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end; 
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-logo {
+  height: auto;
+  max-height: 100px;
+}
+
+.footer-info {
+  text-align: right;
+}
+
+.footer-contact p, .footer-university p {
+  margin: 0.4rem;
+  font-size: 1rem;
+}
+
+.footer-contact strong {
+  color: var(--accent-color);
+}
+
+/* Para tablets */
+@media screen and (max-width: 768px) {
+  .main-nav {
+    padding: 1rem 2%;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .section-title {
+    font-size: 3em;
+  }
+  .countdown-timer span {
+    font-size: 3em;
+  }
+  .hero-overlay {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .countdown-section {
+    padding: 5rem 2%;
+  }
+}
+
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas grandes */
+@media (max-width: 1440px) {
+  .main-nav {
+    padding: 1.2rem 3%;
+  }
+  .nav-links {
+    gap: 40px;
+  }
+  .hero-overlay {
+    max-width: 95%;
+  }
+  .section-title {
+    font-size: 4.5em;
+  }
+  .countdown-timer span {
+    font-size: 4em;
+  }
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas medianas (Tablets grandes y pequeños laptops) */
+@media (max-width: 1024px) {
+  .main-nav {
+    padding: 1.2rem 3%;
+  }
+  .nav-links {
+    gap: 40px;
+  }
+  .hero-overlay {
+    max-width: 95%;
+  }
+  .section-title {
+    font-size: 4.5em;
+  }
+  .countdown-timer span {
+    font-size: 4em;
+  }
+}
+
+/* Para tablets y dispositivos medianos */
+@media (max-width: 768px) {
+  .main-nav {
+      flex-direction: row;
+      padding: 5%;
+      width: 40%;
+      transform: scale(0.85);
+      transform-origin: top left;
+  }
+  .nav-links {
+    gap: 0.5px; /* Reduce aún más el espacio entre los enlaces */
+    justify-content: flex-start; /* Alinea los enlaces hacia el inicio */
+    width: auto; /* Ajusta el ancho para que no ocupe tanto espacio */
+    flex-wrap: nowrap;
+    font-size: 2rem !important;    
+    padding: 0.1rem 0.2rem; /* Reduce el espacio interno */
+  }
+  .hero-overlay {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+  }
+  .section-title {
+    font-size: 2em;
+  }
+  .countdown-timer {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .countdown-timer span {
+    flex-direction: row;
+    font-size: 1.5em;
+  }
+  .coming-soon-container {
+    padding: 0 1rem;
+  }
+  .time-title{
+    flex-direction: row;
+    font-size: 0.9em;
+  }
+
+  /* Footer */ 
+
+   
+  .main-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que se envuelvan los elementos */
+    padding: 1rem 1%;
+  }
+
+  /* Asegura que el bloque social se centre y se ajuste en pantallas pequeñas */
+  .footer-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Para la parte de contenido del footer (logo e info) */
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que se apilen si es necesario */
+    width: 100%;
+  }
+
+  .footer-logo {
+    display: none; /* Oculta el logo */
+  }
+
+  .footer-info {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+
+
+  
+}
+
+/* Para teléfonos pequeños */
+@media (max-width: 393px) {
+  .main-nav {
+    flex-direction: row;
+    padding: 5%;
+    width: 40%;
+    transform: scale(0.8);
+    transform-origin: top left;
+  }
+  .nav-links {
+    gap: 0.5px; /* Reduce aún más el espacio entre los enlaces */
+    justify-content: flex-start; /* Alinea los enlaces hacia el inicio */
+    width: auto; /* Ajusta el ancho para que no ocupe tanto espacio */
+    flex-wrap: nowrap;
+    font-size: 0.3rem !important;    
+    padding: 0.1rem 0.2rem; /* Reduce el espacio interno */
+  }
+  .nav-logo {
+    width: 60px;
+    height: auto;
+    margin-left: 5px;
+  }
+  .section-title {
+    font-size: 2em;
+  }
+  .countdown-timer span {
+    flex-direction: row;
+    font-size: 1.5em;
+  }
+  .time-title{
+    flex-direction: row;
+    font-size: 0.9em;
+  }
+    /* Footer */
+  .main-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que se envuelvan los elementos */
+    padding: 1rem 1%;
+  }
+
+  /* Asegura que el bloque social se centre y se ajuste en pantallas pequeñas */
+  .footer-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Para la parte de contenido del footer (logo e info) */
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que se apilen si es necesario */
+    width: 100%;
+  }
+
+  .footer-logo {
+    display: none; /* Oculta el logo */
+  }
+
+  .footer-info {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+}

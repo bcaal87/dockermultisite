@@ -1,0 +1,5 @@
+congresoumg2025/node_modules/
+congresoumg2025/dist/
+.env
+*.log
+.DS_Store

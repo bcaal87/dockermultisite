@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  siproc_dcn:
+    image: devwithlando/php:5.6-apache-2
+#    command: bash -c "a2enmod rewrite && service apache2 restart"
+    restart: always
+    volumes:
+       - /home/space_man/containers/siproc.uniformesdcn.com:/var/www/html
+#       - html:/usr/share/nginx/html
+    environment:
+      - VIRTUAL_HOST=siproc.uniformesdcn.com
+      - LETSENCRYPT_HOST=siproc.uniformesdcn.com
+      - LETSENCRYPT_EMAIL=erwingeo1021@gmail.com
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

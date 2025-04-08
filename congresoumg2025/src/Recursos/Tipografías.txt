@@ -1,0 +1,5 @@
+* Pavanam --> Titulo/Dias/Horas/Minutos/Seundos
+* Paytone One --> Numeros
+* Radyley --> Pie de Página
+* Chonburi
+* Abel
