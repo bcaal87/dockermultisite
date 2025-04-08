@@ -5,7 +5,7 @@ import "../styles/ComingSoon.css";
 import fondo1 from "../Recursos/img/image1.png";
 import overlayImg from "../Recursos/img/XIII30Si.png";
 import overlayImgAlt from "../Recursos/img/XIII.png";
-import logo from "../Recursos/img/logo.png";
+import logo from "../Recursos/img/Logo.png";
 import fb from "../Recursos/img/iconos/fb.png";
 import ig from "../Recursos/img/iconos/ig.png";
 import google from "../Recursos/img/iconos/google.png";
